@@ -55,10 +55,8 @@ export default function Home() {
   const currentTemplate = templates
   const lastMessage = messages[messages.length - 1]
 
-  // Determine which API to use based on morph toggle and existing fragment
-  const shouldUseMorph =
-    useMorphApply && fragment && fragment.code && fragment.file_path
-  const apiEndpoint = shouldUseMorph ? '/api/morph-chat' : '/api/chat'
+  // Always use the regular chat API for multi-file generation
+  const apiEndpoint = '/api/chat'
 
   const { object, submit, isLoading, stop, error } = useObject({
     api: apiEndpoint,
@@ -105,7 +103,6 @@ export default function Home() {
       setFragment(object)
       const content: Message['content'] = [
         { type: 'text', text: object.commentary || '' },
-        { type: 'code', text: object.code || '' },
       ]
 
       if (!lastMessage || lastMessage.role !== 'assistant') {
@@ -167,7 +164,6 @@ export default function Home() {
       template: currentTemplate,
       model: currentModel,
       config: languageModel,
-      ...(shouldUseMorph && fragment ? { currentFragment: fragment } : {}),
     })
 
     setChatInput('')
@@ -185,7 +181,6 @@ export default function Home() {
       template: currentTemplate,
       model: currentModel,
       config: languageModel,
-      ...(shouldUseMorph && fragment ? { currentFragment: fragment } : {}),
     })
   }
 
