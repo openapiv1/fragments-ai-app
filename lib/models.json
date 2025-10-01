@@ -1,0 +1,95 @@
+{
+  "models": [
+    {
+      "id": "models/gemini-2.5-flash-preview-05-20",
+      "provider": "Google Generative AI",
+      "providerId": "google",
+      "name": "Gemini 2.5 Flash",
+      "multiModal": true
+    },
+    {
+      "id": "models/gemini-2.5-pro-preview-05-06",
+      "provider": "Google Generative AI",
+      "providerId": "google",
+      "name": "Gemini 2.5 Pro",
+      "multiModal": true
+    },
+    {
+      "id": "devstral-medium-latest",
+      "provider": "Mistral",
+      "providerId": "mistral",
+      "name": "Devstral Medium",
+      "multiModal": false
+    },
+    {
+      "id": "mistral-large-latest",
+      "provider": "Mistral",
+      "providerId": "mistral",
+      "name": "Mistral Large",
+      "multiModal": false
+    },
+    {
+      "id": "codestral-2501",
+      "provider": "Mistral",
+      "providerId": "mistral",
+      "name": "Codestral 2501",
+      "multiModal": false
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "provider": "Groq",
+      "providerId": "groq",
+      "name": "GPT OSS 120B",
+      "multiModal": false
+    },
+    {
+      "id": "moonshotai/kimi-k2-instruct-0905",
+      "provider": "Groq",
+      "providerId": "groq",
+      "name": "Kimi K2 Instruct",
+      "multiModal": false
+    },
+    {
+      "id": "moonshotai/Kimi-K2-Instruct-0905",
+      "provider": "Together AI",
+      "providerId": "togetherai",
+      "name": "Kimi K2 Instruct",
+      "multiModal": false
+    },
+    {
+      "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+      "provider": "Together AI",
+      "providerId": "togetherai",
+      "name": "Qwen3 Coder 480B",
+      "multiModal": false
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V3.1",
+      "provider": "Together AI",
+      "providerId": "togetherai",
+      "name": "DeepSeek V3.1",
+      "multiModal": false
+    },
+    {
+      "id": "zai-org/GLM-4.5-Air-FP8",
+      "provider": "Together AI",
+      "providerId": "togetherai",
+      "name": "GLM 4.5 Air",
+      "multiModal": false
+    },
+    {
+      "id": "grok-4-fast-non-reasoning",
+      "provider": "xAI",
+      "providerId": "xai",
+      "name": "Grok 4 Fast (Non-Reasoning)",
+      "multiModal": false
+    },
+    {
+      "id": "grok-code-fast-1",
+      "provider": "xAI",
+      "providerId": "xai",
+      "name": "Grok Code Fast 1",
+      "multiModal": false
+    }
+  ]
+}
