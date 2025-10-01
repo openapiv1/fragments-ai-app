@@ -108,10 +108,12 @@ export function Preview({
             <TabsContent value="code" className="h-full">
               {fragment.files && fragment.files.length > 0 && (
                 <FragmentCode
-                  files={fragment.files.map((file) => ({
-                    name: file.file_path || file.file_name || 'unknown',
-                    content: file.file_content || '',
-                  }))}
+                  files={fragment.files
+                    .filter((file) => file && file.file_path && file.file_content)
+                    .map((file) => ({
+                      name: file!.file_path!,
+                      content: file!.file_content!,
+                    }))}
                 />
               )}
             </TabsContent>
